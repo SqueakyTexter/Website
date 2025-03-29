@@ -1,124 +1,131 @@
-/* General styles */
+/* Set the background color of the entire website to black */
 body {
-    font-family: 'Arial', sans-serif;
-    color: #fff;
-    background-color: #121212;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Header and Navigation */
 header {
-    background-color: #1f1f1f;
+    background-color: #111;
     padding: 20px;
     text-align: center;
 }
 
-nav ul {
+header nav ul {
     list-style-type: none;
     padding: 0;
 }
 
-nav ul li {
+header nav ul li {
     display: inline;
     margin: 0 15px;
 }
 
-nav ul li a {
-    color: #ff4500;
+header nav ul li a {
+    color: white;
     text-decoration: none;
     font-size: 18px;
 }
 
-/* Home Section */
-#home {
-    text-align: center;
-    padding: 80px 20px;
-    background: #222;
+header nav ul li a:hover {
+    text-decoration: underline;
 }
 
-#home h1 {
-    font-size: 3rem;
+h1, h2 {
+    color: white;
 }
 
-#home p {
-    font-size: 1.2rem;
+section {
+    padding: 20px;
+    margin: 20px;
 }
 
-/* Blog Section */
-#blog {
-    padding: 40px 20px;
-    background: #333;
+section#home {
     text-align: center;
 }
 
-#blog h2 {
-    font-size: 2.5rem;
+section#home h1 {
+    font-size: 36px;
 }
 
+section#home p {
+    font-size: 18px;
+}
+
+/* Style for Blog Section */
 #blog article {
     margin-bottom: 30px;
 }
 
-#blog a {
-    color: #ff4500;
-    font-size: 1rem;
+#blog article h3 {
+    color: white;
+    font-size: 24px;
 }
 
-/* Buy Section */
-#buy {
-    text-align: center;
-    padding: 60px 20px;
-    background: #222;
+#blog article p {
+    color: #bbb;
 }
 
-.cta-button {
-    background-color: #ff4500;
-    color: #fff;
-    padding: 15px 30px;
+/* Styling for Links instead of buttons */
+a {
+    color: #ff6600;
+    font-size: 18px;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
 }
 
-/* About Me Section */
-#about-me {
-    padding: 40px 20px;
-    background: #333;
-    text-align: center;
+a:hover {
+    text-decoration: underline;
+}
+
+/* Remove the orange color buttons and style links */
+#buy a {
+    background: none;
+    padding: 0;
+    border: none;
+    color: #ff6600;
+    font-size: 20px;
 }
 
 .profile-pic {
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
-    margin-top: 20px;
+    width: auto;
+    height: 200px; /* Adjust the height */
+    max-width: 80%; /* To make sure it's not too large */
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%; /* Makes it oval */
+    object-fit: cover; /* Keeps the image inside the oval */
 }
 
-#about-me p {
-    font-size: 1.1rem;
-    margin-top: 20px;
-}
-
-/* Contact Section */
-#contact {
-    padding: 40px 20px;
-    background: #222;
-    text-align: center;
-}
-
-#contact a {
-    color: #ff4500;
-}
-
-/* Footer */
+/* Footer Styling */
 footer {
-    background-color: #1f1f1f;
-    color: #777;
+    background-color: #111;
+    padding: 10px;
     text-align: center;
-    padding: 20px;
 }
 
 footer p {
-    font-size: 0.9rem;
+    color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section#home h1 {
+        font-size: 28px;
+    }
+
+    section#home p {
+        font-size: 16px;
+    }
+
+    .profile-pic {
+        width: 100%; /* Make the image responsive */
+        height: auto;
+    }
 }
